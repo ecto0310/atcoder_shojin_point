@@ -1,0 +1,1 @@
+# atcoder_shojin_point
