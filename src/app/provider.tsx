@@ -3,6 +3,8 @@
 import { CssBaseline, useMediaQuery } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { ReactNode, useMemo } from "react";
 
 interface ProviderProps {
@@ -23,10 +25,12 @@ const Provider = ({ children }: ProviderProps): JSX.Element => {
 
   return (
     <AppRouterCacheProvider>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        {children}
-      </ThemeProvider>
+      <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          {children}
+        </ThemeProvider>
+      </LocalizationProvider>
     </AppRouterCacheProvider>
   );
 };
