@@ -2,13 +2,7 @@ import dayjs, { Dayjs } from "dayjs";
 import { Condition } from "./condition";
 
 export interface Task {
-  phase:
-    | "getProblems"
-    | "getSubmissionCounts"
-    | "getSubmissions"
-    | "getRates"
-    | "calcPoints"
-    | "finish";
+  phase: TaskPhase;
   problems: { [key: string]: Problem };
   users: User[];
   index: number;
@@ -16,6 +10,14 @@ export interface Task {
   submissions: Set<number>;
   latestSubmitDateTime: Dayjs;
 }
+
+export type TaskPhase =
+  | "getProblems"
+  | "getSubmissionCounts"
+  | "getSubmissions"
+  | "getRates"
+  | "calcPoints"
+  | "finish";
 
 export interface Problem {
   intercept: number;

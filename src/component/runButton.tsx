@@ -3,7 +3,6 @@ import { defaultProgress } from "@/interface/progress";
 import { Result } from "@/interface/result";
 import { startTask } from "@/lib/task";
 import { Button, CircularProgress, Grid, LinearProgress } from "@mui/material";
-import dayjs from "dayjs";
 import { Dispatch, SetStateAction, useState } from "react";
 
 interface RunButtonProps {
@@ -40,8 +39,6 @@ const RunButton = ({ condition, setResult }: RunButtonProps) => {
   }
 
   const triggerStartTask = () => {
-    condition.beginDateTime ??= dayjs(0);
-    condition.endDateTime ??= dayjs();
     startTask(condition, setResult, setProgress);
   };
 

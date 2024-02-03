@@ -8,12 +8,15 @@ import { getSubmissionCounts } from "./task/getSubmissionCounts";
 import { getSubmissions } from "./task/getSubmissions";
 import { getRates } from "./task/getRates";
 import { calcPoints } from "./task/calcPoints";
+import dayjs from "dayjs";
 
 export const startTask = (
   condition: Condition,
   setResult: Dispatch<SetStateAction<Result>>,
   setProgress: Dispatch<SetStateAction<Progress>>
 ) => {
+  condition.beginDateTime ??= dayjs(0);
+  condition.endDateTime ??= dayjs();
   const task = defaultTask(condition.username);
   setResult(defaultResult);
   setProgress(calcProgress(task));
@@ -26,7 +29,6 @@ const runTask = async (
   setResult: Dispatch<SetStateAction<Result>>,
   setProgress: Dispatch<SetStateAction<Progress>>
 ) => {
-  const interval = 20000;
   switch (task.phase) {
     case "getProblems":
       await getProblems(task);
