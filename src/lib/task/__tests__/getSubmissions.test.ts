@@ -27,7 +27,7 @@ describe("getSubmissions", () => {
           result: "AC",
           execution_time: 1,
         },
-      ]
+      ],
     )
     .get(
       "https://kenkoooo.com/atcoder/atcoder-api/v3/user/submissions?user=username2&from_second=0",
@@ -44,7 +44,7 @@ describe("getSubmissions", () => {
           result: "AC",
           execution_time: 1,
         },
-      ]
+      ],
     );
 
   const initialize = (usernames: string[]): [Condition, Task] => {

@@ -6,7 +6,7 @@ import {
 
 export const getProblems = async (task: Task) => {
   const problems: ResProblems = await fetch(
-    "https://kenkoooo.com/atcoder/resources/problem-models.json"
+    "https://kenkoooo.com/atcoder/resources/problem-models.json",
   ).then((res) => res.json());
 
   for (const problemId in problems) {

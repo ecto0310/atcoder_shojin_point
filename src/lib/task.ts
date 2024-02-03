@@ -13,7 +13,7 @@ import dayjs from "dayjs";
 export const startTask = (
   condition: Condition,
   setResult: Dispatch<SetStateAction<Result>>,
-  setProgress: Dispatch<SetStateAction<Progress>>
+  setProgress: Dispatch<SetStateAction<Progress>>,
 ) => {
   condition.beginDateTime ??= dayjs(0);
   condition.endDateTime ??= dayjs();
@@ -27,7 +27,7 @@ const runTask = async (
   task: Task,
   condition: Condition,
   setResult: Dispatch<SetStateAction<Result>>,
-  setProgress: Dispatch<SetStateAction<Progress>>
+  setProgress: Dispatch<SetStateAction<Progress>>,
 ) => {
   switch (task.phase) {
     case "getProblems":

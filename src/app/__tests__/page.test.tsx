@@ -8,7 +8,7 @@ describe("routing /", () => {
     render(
       <Body>
         <Page />
-      </Body>
+      </Body>,
     );
   });
 });

@@ -15,13 +15,13 @@ describe("getSubmissionCounts", () => {
       "https://kenkoooo.com/atcoder/atcoder-api/v3/user/submission_count?user=username1&from_second=0&to_second=1704034800",
       {
         count: 1,
-      }
+      },
     )
     .get(
       "https://kenkoooo.com/atcoder/atcoder-api/v3/user/submission_count?user=username2&from_second=0&to_second=1704034800",
       {
         count: 2,
-      }
+      },
     );
 
   const initialize = (usernames: string[]): [Condition, Task] => {

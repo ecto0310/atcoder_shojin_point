@@ -11,7 +11,7 @@ export const getRates = async (task: Task) => {
 const fetchRates = async (task: Task) => {
   const user = task.users[task.index];
   const rateHistories: ResRateHistories = await fetch(
-    `https://kenkoooo.com/atcoder/proxy/users/${user.username}/history/json`
+    `https://kenkoooo.com/atcoder/proxy/users/${user.username}/history/json`,
   ).then((res) => res.json());
   const rates = rateHistories.map((rateHistory) => rateHistory.NewRating);
   if (0 < rates.length) {

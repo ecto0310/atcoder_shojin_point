@@ -15,11 +15,11 @@ export const fetchSubmissions = async (task: Task, condition: Condition) => {
   const submissions: ResSubmissions = await fetch(
     `https://kenkoooo.com/atcoder/atcoder-api/v3/user/submissions?user=${
       user.username
-    }&from_second=${task.latestSubmitDateTime.unix()}`
+    }&from_second=${task.latestSubmitDateTime.unix()}`,
   ).then((res) => res.json());
   if (0 < submissions.length) {
     task.latestSubmitDateTime = dayjs(
-      submissions[submissions.length - 1].epoch_second * 1000
+      submissions[submissions.length - 1].epoch_second * 1000,
     );
   }
 

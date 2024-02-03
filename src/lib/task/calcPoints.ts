@@ -21,7 +21,7 @@ const calcTee = (user: User, problems: { [key: string]: Problem }) => {
     if (problemId in problems) {
       user.sumTee += Math.exp(
         problems[problemId].slope * topPlayerRating +
-          problems[problemId].intercept
+          problems[problemId].intercept,
       );
     }
   }
