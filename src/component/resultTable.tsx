@@ -1,3 +1,4 @@
+import { Result } from "@/interface/result";
 import {
   TableContainer,
   Paper,
@@ -9,7 +10,11 @@ import {
   Grid,
 } from "@mui/material";
 
-const ResultTable = () => {
+interface ResultTableProps {
+  result: Result;
+}
+
+const ResultTable = ({ result }: ResultTableProps) => {
   return (
     <Grid container alignItems="center" justifyContent="center" sx={{ pt: 2 }}>
       <Grid item xs={8}>
@@ -24,7 +29,20 @@ const ResultTable = () => {
                 <TableCell>latestRate</TableCell>
               </TableRow>
             </TableHead>
-            <TableBody></TableBody>
+            <TableBody>
+              {result.complete &&
+                result.userResults.map((userResult, idx) => {
+                  return (
+                    <TableRow key={idx}>
+                      <TableCell>{userResult.username}</TableCell>
+                      <TableCell>{userResult.point}</TableCell>
+                      <TableCell>{userResult.sumTee}</TableCell>
+                      <TableCell>{userResult.highestRate}</TableCell>
+                      <TableCell>{userResult.latestRate}</TableCell>
+                    </TableRow>
+                  );
+                })}
+            </TableBody>
           </Table>
         </TableContainer>
       </Grid>
