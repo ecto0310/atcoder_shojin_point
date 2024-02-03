@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
-import Provider from "./provider";
-import Header from "./header";
+import Body from "./body";
 
 export const metadata = {
   title: "AtCoder Shojin Point",
@@ -14,10 +13,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html>
       <body>
-        <Provider>
-          <Header />
-          {children}
-        </Provider>
+        <Body>{children}</Body>
       </body>
     </html>
   );
