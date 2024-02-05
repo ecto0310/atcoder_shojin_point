@@ -1,4 +1,5 @@
 import { AppBar, Button, Link, Toolbar, Typography } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Header = () => {
   return (
@@ -8,7 +9,9 @@ const Header = () => {
           AtCoder Shojin Point
         </Typography>
         <Link href="https://github.com/ecto0310/atcoder_shojin_point">
-          <Button>GitHub</Button>
+          <Button variant="contained" startIcon={<GitHubIcon />}>
+            GitHub
+          </Button>
         </Link>
       </Toolbar>
     </AppBar>
