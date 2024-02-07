@@ -8,11 +8,14 @@ const Header = () => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           AtCoder Shojin Point
         </Typography>
-        <Link href="https://github.com/ecto0310/atcoder_shojin_point">
-          <Button variant="contained" startIcon={<GitHubIcon />}>
-            GitHub
-          </Button>
-        </Link>
+        <Button
+          color="inherit"
+          startIcon={<GitHubIcon />}
+          component={Link}
+          href="https://github.com/ecto0310/atcoder_shojin_point"
+        >
+          GitHub
+        </Button>
       </Toolbar>
     </AppBar>
   );
