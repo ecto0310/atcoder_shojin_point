@@ -51,6 +51,7 @@ describe("getSubmissions", () => {
     const condition = {
       ...defaultCondition(),
       beginDateTime: dayjs(0),
+      crawlBeginDateTime: dayjs(0),
       endDateTime: dayjs(1704034800000),
     };
     const task = {

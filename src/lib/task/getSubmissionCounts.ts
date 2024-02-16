@@ -14,7 +14,7 @@ const fetchSubmissionCounts = async (task: Task, condition: Condition) => {
   const submissionCount: ResSubmissionCount = await fetch(
     `https://kenkoooo.com/atcoder/atcoder-api/v3/user/submission_count?user=${
       user.username
-    }&from_second=${condition.beginDateTime?.unix()}&to_second=${condition.endDateTime?.unix()}`,
+    }&from_second=${condition.crawlBeginDateTime?.unix()}&to_second=${condition.endDateTime?.unix()}`,
   ).then((res) => res.json());
   user.submitCount = submissionCount.count;
   finishCurrentUser(task);
@@ -31,5 +31,5 @@ const finishGetSubmissionCounts = (task: Task, condition: Condition) => {
     .reduce((sum, now) => sum + now, 0);
   task.submissions = new Set<number>();
   task.index = 0;
-  task.latestSubmitDateTime = condition.beginDateTime!;
+  task.latestSubmitDateTime = condition.crawlBeginDateTime!;
 };

@@ -17,6 +17,10 @@ export const startTask = (
 ) => {
   condition.beginDateTime ??= dayjs(0);
   condition.endDateTime ??= dayjs();
+  condition.crawlBeginDateTime = condition.onlyUniqueAC
+    ? dayjs(0)
+    : condition.beginDateTime;
+  console.log(condition);
   const task = defaultTask(condition.username);
   setResult(defaultResult);
   setProgress(calcProgress(task));
@@ -65,6 +69,7 @@ const runTask = async (
       }),
     });
   }
+  console.log(task);
   setProgress(calcProgress(task));
 };
 

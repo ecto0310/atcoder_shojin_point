@@ -26,7 +26,11 @@ export const fetchSubmissions = async (task: Task, condition: Condition) => {
   submissions.forEach((e) => {
     task.submissions.add(e.id);
     const acceptDate = dayjs(e.epoch_second * 1000);
-    if (acceptDate < condition.endDateTime! && e.result === "AC") {
+    if (
+      !(e.problem_id in user.accepts) &&
+      acceptDate < condition.endDateTime! &&
+      e.result === "AC"
+    ) {
       user.accepts[e.problem_id] = acceptDate;
     }
   });
@@ -40,7 +44,7 @@ export const fetchSubmissions = async (task: Task, condition: Condition) => {
 
 const finishCurrentUser = (task: Task, condition: Condition) => {
   task.index++;
-  task.latestSubmitDateTime = condition.beginDateTime!;
+  task.latestSubmitDateTime = condition.crawlBeginDateTime!;
 };
 
 const finishGetSubmissions = (task: Task) => {
