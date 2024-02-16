@@ -1,4 +1,4 @@
-import { Grid, Input, InputLabel } from "@mui/material";
+import { Checkbox, Grid, Input, InputLabel } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers";
 import RunButton from "./runButton";
 import { Dispatch, SetStateAction, useState } from "react";
@@ -80,7 +80,7 @@ const ConditionForm = ({ setResult }: ConditionFormProps) => {
             }
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <InputLabel htmlFor="point-formula">Point Formula</InputLabel>
           <Input
             id="point-formula"
@@ -90,6 +90,19 @@ const ConditionForm = ({ setResult }: ConditionFormProps) => {
               setCondition({
                 ...condition,
                 pointFormula: e.target.value,
+              })
+            }
+          />
+        </Grid>
+        <Grid item xs={1}>
+          <InputLabel htmlFor="only-unique-ac">Only Unique AC</InputLabel>
+          <Checkbox
+            id="only-unique-ac"
+            checked={condition.onlyUniqueAC}
+            onChange={(e) =>
+              setCondition({
+                ...condition,
+                onlyUniqueAC: e.target.checked,
               })
             }
           />
