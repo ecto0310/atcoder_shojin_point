@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@emotion/cache": "11.13.1",
+    "@emotion/cache": "11.13.5",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.7",
