@@ -21,8 +21,8 @@
     "dayjs": "1.11.13",
     "mathjs": "13.2.3",
     "next": "14.2.21",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@babel/preset-react": "7.26.3",
@@ -30,8 +30,8 @@
     "@testing-library/react": "16.1.0",
     "@types/jest": "29.5.14",
     "@types/node": "20.17.10",
-    "@types/react": "18.3.17",
-    "@types/react-dom": "18.3.5",
+    "@types/react": "19.0.2",
+    "@types/react-dom": "19.0.2",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.21",
     "fetch-mock": "9.11.0",
