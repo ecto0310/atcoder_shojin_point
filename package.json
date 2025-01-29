@@ -16,7 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^6.0.0",
     "@mui/material": "^6.0.0",
-    "@mui/material-nextjs": "6.3.1",
+    "@mui/material-nextjs": "6.4.2",
     "@mui/x-date-pickers": "7.24.1",
     "dayjs": "1.11.13",
     "mathjs": "14.1.0",
