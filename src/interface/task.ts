@@ -1,5 +1,4 @@
 import dayjs, { Dayjs } from "dayjs";
-import { Condition } from "./condition";
 
 export interface Task {
   phase: TaskPhase;

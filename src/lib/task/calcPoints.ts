@@ -1,6 +1,6 @@
 import { Condition } from "@/interface/condition";
 import { Problem, Task, User } from "@/interface/task";
-import dayjs, { Dayjs } from "dayjs";
+import { Dayjs } from "dayjs";
 import { evaluate } from "mathjs";
 
 const topPlayerRating = 4000;
