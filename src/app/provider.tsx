@@ -11,7 +11,7 @@ interface ProviderProps {
   children: ReactNode;
 }
 
-const Provider = ({ children }: ProviderProps): JSX.Element => {
+const Provider = ({ children }: ProviderProps) => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
   const theme = useMemo(
     () =>
