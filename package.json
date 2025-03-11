@@ -20,7 +20,7 @@
     "@mui/x-date-pickers": "7.27.3",
     "dayjs": "1.11.13",
     "mathjs": "14.3.1",
-    "next": "15.2.1",
+    "next": "15.2.2",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
@@ -33,7 +33,7 @@
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "eslint": "9.22.0",
-    "eslint-config-next": "15.2.1",
+    "eslint-config-next": "15.2.2",
     "fetch-mock": "9.11.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
