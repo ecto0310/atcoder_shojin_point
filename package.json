@@ -19,7 +19,7 @@
     "@mui/material-nextjs": "6.5.0",
     "@mui/x-date-pickers": "7.29.4",
     "dayjs": "1.11.18",
-    "mathjs": "14.5.3",
+    "mathjs": "14.8.1",
     "next": "15.4.7",
     "react": "19.1.1",
     "react-dom": "19.1.1"
